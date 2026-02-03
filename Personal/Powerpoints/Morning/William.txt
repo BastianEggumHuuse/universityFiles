@@ -1,0 +1,3 @@
+Good Morning index
+Date,Value,Message,Comment
+16.05.2025,4,"ganske bra vil jeg si, så på poker","Gambling?????"

@@ -1,0 +1,364 @@
+Day;Month;Year;Time;Stress;Happiness;Comment (Not mandatory)
+02;07;2025;M;3;4;Første dag!!! Det er en onsdag.
+02;07;2025;N;3;3
+03;07;2025;M;2;4
+03;07;2025;N;2;2
+04;07;2025;M;2;3
+04;07;2025;N;2;3
+05;07;2025;M;1;4;4H er i Japan!! Gøy å få bilder :D
+05;07;2025;N;1;1;Kødda til deltarune chapter 3 egg....
+06;07;2025;M;X;X;Glemte å notere..
+06;07;2025;N;1;7;Gjorde ferdig deltarune chapter 3 holy shit
+07;07;2025;M;X;X;Glemte å notere..
+07;07;2025;N;1;4
+08;07;2025;M;1;3
+08;07;2025;N;1;3
+09;07;2025;M;1;2
+09;07;2025;N;2;2;Kristiansand dag 1. En dag er du her alene!
+10;07;2025;M;1;4
+10;07;2025;N;3;0;Kristiansand dag 2. Så Sabeltann!! Mange følelser fra dette.
+11;07;2025;M;X;X;Glemte å notere..
+11;07;2025;N;2;1;Avskjedsfest ILT
+12;07;2025;M;1;4;Drar til Sverige!!!
+12;07;2025;N;1;0;Var ekstremt varmt idag D:
+13;07;2025;M;1;1
+13;07;2025;N;1;2;Varmen tar knekken på meg owa
+14;07;2025;M;1;4
+14;07;2025;N;1;2
+15;07;2025;M;1;3
+15;07;2025;N;X;X;Glemte å notere..
+16;07;2025;M;1;0;Gjorde ferdig deltarune chapter 4 i går kveld. Føler meg veldig tom rn
+16;07;2025;N;1;-1;deltarune chapter 4 gjør ting med meg aaaa
+17;07;2025;M;1;2
+17;07;2025;N;X;X;Glemte å notere..
+18;07;2025;M;1;3
+18;07;2025;N;1;2
+19;07;2025;M;1;2
+19;07;2025;N;1;1
+20;07;2025;M;X;X;Glemte å notere..
+20;07;2025;N;1;1
+21;07;2025;M;1;2
+21;07;2025;N;1;-1;Ødela kanskje whiteboard
+22;07;2025;M;1;2;Mamma fikset :D
+22;07;2025;N;X;X;Glemte å notere..
+23;07;2025;M;1;4
+23;07;2025;N;X;X;Glemte å notere..
+24;07;2025;M;1;2;Kokte på eget rom i natt.
+24;07;2025;N;1;2;Kjøpte AC i dag :D er kalt på rommet mitt nå
+25;07;2025;M;1;4;Drar til høgis :D
+25;07;2025;N;1;0;Litt dooming rn
+26;07;2025;M;1;5;Topptur!!!
+26;07;2025;M;1;2
+27;07;2025;M;X;X;Glemte å notere...
+27;07;2025;N;2;2
+28;07;2025;M;2;4;På tide å locke in
+28;07;2025;N;2;2;Fikk det ikke helt til...
+29;07;2025;M;1;4
+29;07;2025;N;1;5;Sjukt effektiv i dag!!!!
+30;07;2025;M;1;4;Locker inn for nes :D
+30;07;2025;N;1;2
+31;07;2025;M;1;3;Drar til Nes med Tryhard Taskforce!!
+31;07;2025;N;1;2;Nes med gjengen! Mye dype samtaler.
+01;08;2025;M;1;4;Blir gøy idag :D
+01;08;2025;N;1;0;Føler meg dårlig om CERN søknad...
+02;08;2025;M;1;3;Tur til Brummundal idag!!
+02;08;2025;N;1;3;Poker!!
+03;08;2025;M;X;X;Glemte å notere...
+03;08;2025;N;1;2
+04;08;2025;M;1;3;NM i AI idag :D
+04;08;2025;N;1;1;I aint posting that shit i got my ass kicked.
+05;08;2025;M;X;X;Glemte å notere...
+05;08;2025;N;1;1;Fortsatt vanskelig med AI men jeg prøver mitt beste!!!!!
+06;08;2025;M;1;2;AI dag 3...
+06;08;2025;N;1;1;vanskelig..... Men budsjett!!!
+07;08;2025;M;1;4;Fadder-opplæring idag!!
+07;08;2025;N;1;3;AI gikk faktisk litt bra :D
+08;08;2025;M;1;3
+08;08;2025;N;2;3
+09;08;2025;M;2;3
+09;08;2025;N;1;3
+10;08;2025;M;1;4;Siste dag i ferien
+10;08;2025;N;1;4;Siste natt i ferien
+11;08;2025;M;X;X;Glemte å notere...
+11;08;2025;N;1;5;Silent disco gikk crazy!!!!
+12;08;2025;M;1;5;Fadderuke dag 2 :D
+12;08;2025;N;1;4;Jobbet en vakt på Escape!!
+13;08;2025;M;1;5;Fadderuke dag 3
+13;08;2025;N;1;4;Jobbet to vakt på Escape!!
+14;08;2025;M;1;5;Fadderuke dag 4
+14;08;2025;N;X;X;Glemte å notere...
+15;08;2025;M;X;X;Glemte å notere...
+15;08;2025;N;1;3
+16;08;2025;M;1;3
+16;08;2025;N;1;3
+17;08;2025;M;X;X;Glemte å notere...
+17;08;2025;N;1;5;Høst-semesteret starter imorgen!!
+18;08;2025;M;1;4
+18;08;2025;N;3;-1;Feber.... ao
+19;08;2025;M;X;X;Glemte å notere...
+19;08;2025;N;2;3;Lærer git sånn for real
+20;08;2025;M;2;3
+20;08;2025;N;1;3
+21;08;2025;M;2;5;Musikk og SILKSONG idag!!!!!
+21;08;2025;N;X;X;Glemte å notere...
+22;08;2025;M;X;X;Glemte å notere...
+22;08;2025;N;X;X;Glemte å notere...
+23;08;2025;M;X;X;Glemte å notere...
+23;08;2025;N;1;3
+24;08;2025;M;1;3
+24;08;2025;N;1;4
+25;08;2025;M;1;3
+25;08;2025;N;1;3
+26;08;2025;M;1;4
+26;08;2025;N;1;3
+27;08;2025;M;X;X;Glemte å notere...
+27;08;2025;N;2;2
+28;08;2025;M;2;2
+28;08;2025;N;X;X;Glemte å notere...
+29;08;2025;M;2;2
+29;08;2025;N;2;2
+30;08;2025;M;2;3
+30;08;2025;N;2;2
+31;08;2025;M;1;3
+31;08;2025;N;1;2
+01;09;2025;M;1;3;September!!
+01;09;2025;N;1;6;Tok piercing i dag!!!!!!
+02;09;2025;M;X;X;Glemte å notere...
+02;09;2025;N;1;3
+03;09;2025;M;1;3;Forsov meg D:
+03;09;2025;N;1;4;Skrev sjukt mye poker kode idag :D
+04;09;2025;M;1;7;SILKSONG IDAG!!!!!
+04;09;2025;N;1;10;Oppriktig peak fiction.
+05;09;2025;M;X;X;Glemte å notere...
+05;09;2025;N;1;4;Hyggelig poker time
+06;09;2025;M;1;4
+06;09;2025;M;2;2
+07;09;2025;M;2;3
+07;09;2025;N;1;3
+08;09;2025;M;1;2
+08;09;2025;N;1;2
+09;09;2025;M;1;3
+09;09;2025;N;1;4
+10;09;2025;M;1;4
+10;09;2025;N;1;3
+11;09;2025;M;1;2
+11;09;2025;N;1;4
+12;09;2025;M;X;X;Glemte å notere...
+12;09;2025;N;1;3
+13;09;2025;M;X;X;Glemte å notere
+13;09;2025;N;1;5;Silksong got me feeling good
+14;09;2025;M;1;3
+14;09;2025;N;1;2
+15;09;2025;M;1;3
+15;09;2025;N;1;3
+16;09;2025;M;1;2
+16;09;2025;N;1;3
+17;09;2025;M;1;3
+17;09;2025;N;1;3
+18;09;2025;M;1;2
+18;09;2025;N;X;X;Glemte å notere
+19;09;2025;M;X;X;Glemte å notere
+19;09;2025;N;X;X;Glemte å notere
+20;09;2025;M;1;3
+20;09;2025;N;1;2
+21;09;2025;M;2;3
+21;09;2025;N;2;4
+22;09;2025;M;2;3
+22;09;2025;N;1;3
+23;09;2025;M;X;X;Glemte å notere
+23;09;2025;N;1;3
+24;09;2025;M;1;3
+24;09;2025;N;1;3
+25;09;2025;M;1;2
+25;09;2025;N;1;5;skong
+26;09;2025;M;1;2
+26;09;2025;N;1;2
+27;09;2025;M;X;X;Glemte å notere
+27;09;2025;N;1;5;skong
+28;09;2025;M;1;3
+28;09;2025;N;X;X;Glemte å notere
+29;09;2025;M;X;X;Glemte å notere
+29;09;2025;N;1;5;Mail fra Erik???
+30;09;2025;M;1;3
+30;09;2025;N;1;2;Internett døde.....
+01;10;2025;M;1;4
+01;10;2025;N;1;5;Nærmer meg slutten av silksong....
+02;10;2025;M;1;4;Bergen!!!
+02;10;2025;N;X;X;Stuck i Bergen...
+03;10;2025;M;X;X;Stuck i Bergen...
+03;10;2025;N;X;X;Stuck i Bergen...
+04;10;2025;M;X;X;Stuck i Bergen...
+04;10;2025;N;X;X;Stuck i Bergen...
+05;10;2025;M;X;X;Stuck i Bergen...
+05;10;2025;N;1;4;Endelig hjemme :D
+06;10;2025;M;X;X;Glemte å notere
+06;10;2025;N;2;3;Eksamen imorgen... og Silksong snart ferdig D:
+07;10;2025;M;X;X;Glemte å notere
+07;10;2025;N;1;-1;Eksamen gikk dårlig......
+08;10;2025;M;X;X;Glemte å notere
+08;10;2025;N;1;2;
+09;10;2025;M;1;1;Eksamen!!!
+09;10;2025;N;1;1;Eksamen gikk veldig dårlig......
+10;10;2025;M;1;3
+10;10;2025;N;1;1;Gloom...
+11;10;2025;M;1;3
+11;10;2025;N;1;2
+12;10;2025;M;1;3
+12;10;2025;N;1;2
+13;10;2025;M;X;X;Glemte å notere
+13;10;2025;N;1;3
+14;10;2025;M;X;X;Glemte å notere
+14;10;2025;N;1;1;Gloom...
+15;10;2025;M;1;2;Gloom part 2
+15;10;2025;N;1;2
+16;10;2025;M;1;2
+16;10;2025;N;1;2
+17;10;2025;M;1;2
+17;10;2025;N;1;2
+18;10;2025;M;X;X;Glemte å notere...
+18;10;2025;N;X;X;Hos Bendik
+19;10;2025;N;X;X;Hos Bendik
+19;10;2025;N;1;2
+20;10;2025;M;1;3
+20;10;2025;N;1;2
+21;10;2025;M;X;X;Glemte å notere...
+21;10;2025;N;1;2
+22;10;2025;M;1;2
+22;10;2025;N;1;3
+23;10;2025;M;1;2
+23;10;2025;N;1;4
+24;10;2025;M;X;X;Glemte å notere...
+24;10;2025;N;1;2
+25;10;2025;M;1;3
+25;10;2025;N;1;4;Mista steel soul save...
+26;10;2025;M;1;3
+26;10;2025;N;1;2
+27;10;2025;M;X;X;Glemte å notere...
+27;10;2025;N;1;2
+28;10;2025;M;X;X;Glemte å notere...
+28;10;2025;N;1;3
+29;10;2025;M;X;X;Glemte å notere...
+29;10;2025;N;X;X;Glemte å notere...
+30;10;2025;M;1;3
+30;10;2025;N;1;3
+31;10;2025;M;X;X;Glemte å notere...
+31;10;2025;N;1;0;aaaahhhhh
+01;11;2025;M;2;1;aaahh part 2
+01;11;2025;N;X;X;Glemte å notere...
+02;11;2025;M;X;X;Glemte å notere...
+02;11;2025;N;2;1;ugah
+03;11;2025;M;2;2;stress
+03;11;2025;N;2;2;stress
+04;11;2025;M;X;X;Glemte å notere...
+04;11;2025;N;X;X;Glemte å notere...
+05;11;2025;M;1;2
+05;11;2025;N;1;2
+06;11;2025;M;1;2
+06;11;2025;N;1;3
+07;11;2025;M;X;X;Glemte å notere...
+07;11;2025;N;1;3
+08;11;2025;M;1;3;Fysikk Time fr
+08;11;2025;M;1;4;FYSIKK TIME FR
+09;11;2025;M;X;X;Glemte å notere...
+09;11;2025;M;1;3;Burbsdag imorgen :D
+10;11;2025;M;2;5;Burvdag
+10;11;2025;M;1;3
+11;11;2025;M;1;3
+11;11;2025;N;1;3
+12;11;2025;M;1;2
+12;11;2025;N;1;2
+13;11;2025;M;X;X;Glemte å notere...
+13;11;2025;N;1;4
+14;11;2025;M;X;X;Glemte å notere...
+14;11;2025;N;1;5
+15;11;2025;M;1;6;Bursdag!!!
+15;11;2025;M;1;1;Bursdag ferdig D:
+16;11;2025;M;1;3;The grind begins
+16;11;2025;N;1;3;The grind sleeps
+17;11;2025;M;X;X;Glemte å notere...
+17;11;2025;N;1;3;Ast going good
+18;11;2025;M;X;X;Glemte å notere...
+18;11;2025;N;1;3;Glemte å notere...
+19;11;2025;M;1;2;Leverte del 5 hell yeag
+19;11;2025;N;1;4;So in love bro ahhh
+20;11;2025;M;X;X;Glemte å notere...
+20;11;2025;N;X;X;Glemte å notere...
+21;11;2025;M;X;X;Glemte å notere...
+21;11;2025;N;1;3;So in love bro ahhh part 2
+22;11;2025;M;1;2
+22;11;2025;N;X;X;Glemte å notere...
+23;11;2025;M;X;X;Glemte å notere...
+23;11;2025;N;1;2
+24;11;2025;M;1;1;my piants...
+*No More Pills!!!
+24;11;2025;N;1;2
+25;11;2025;M;1;2
+25;11;2025;N;1;2
+26;11;2025;M;1;3
+26;11;2025;N;1;2; love season fr
+27;11;2025;M;X;X;Glemte å notere...
+27;11;2025;N;1;3
+28;11;2025;M;1;2
+28;11;2025;N;1;2
+29;11;2025;M;1;3
+29;11;2025;N;1;1
+30;11;2025;M;X;X;Glemte å notere...
+30;11;2025;N;3;2;Asting time
+01;12;2025;M;X;X;Glemte å notere...
+01;12;2025;N;3;2
+02;12;2025;M;3;3
+02;12;2025;N;2;2;Eksamen imorgen!!!!
+03;12;2025;M;2;2
+03;12;2025;N;X;X;Glemte å notere...
+04;12;2025;M;X;X;Glemte å notere...
+04;12;2025;M;2;2
+05;12;2025;M;3;2;Eksamen!!!!!
+05;12;2025;N;2;0;Eksamen gikk helt sånn greit. 
+06;12;2025;M;2;2
+06;12;2025;N;2;3
+07;12;2025;M;2;3
+07;12;2025;N;2;3
+08;12;2025;M;X;X;Glemte å notere...
+08;12;2025;N;2;4
+09;12;2025;M;2;3
+09;12;2025;N;2;2;Føler meg ganske dårlig ovenfor eksamener 
+10;12;2025;M;2;3
+10;12;2025;N;2;2;Faen eksamen altså
+11;12;2025;M;2;1;Let's do this one last time
+11;12;2025;N;2;3;AST ERA BEGINS
+12;12;2025;M;2;2;AST helvete dag 1
+12;12;2025;N;2;2;AST helvete natt 1
+13;12;2025;M;2;2;AST helvete dag 2
+13;12;2025;N;2;2;AST helvete natt 2
+14;12;2025;M;2;2;AST helvete dag 3
+14;12;2025;N;2;2;AST helvete natt 3
+15;12;2025;M;2;2;AST helvete dag 4
+15;12;2025;N;2;2;AST ERA ENDS
+16;12;2025;M;X;X;Glemte å notere...
+16;12;2025;N;0;3
+17;12;2025;M;1;3;Ferie begins fr
+17;12;2025;N;2;4;Sushi time 
+18;12;2025;M;2;3
+18;12;2025;N;3;1;Siste eksamen imorgen....
+19;12;2025;M;1;1
+19;12;2025;N;1;3
+20;12;2025;M;1;4;Ferie begins FR
+20;12;2025;N;1;3
+21;12;2025;M;1;2
+21;12;2025;N;1;2
+22;12;2025;M;1;3
+22;12;2025;N;1;2
+23;12;2025;M;X;X;Glemte å notere...
+23;12;2025;N;X;X;Glemte å notere...
+24;12;2025;M;0;5;Jul :DDDD
+24;12;2025;N;0;6;Jul :DDDD
+25;12;2025;M;X;X;Glemte å notere...
+25;12;2025;M;X;X;Glemte å notere...
+26;12;2025;N;X;X;Glemte å notere...
+26;12;2025;N;X;X;Glemte å notere...
+27;12;2025;M;X;X;Glemte å notere...
+27;12;2025;N;X;X;Glemte å notere...
+28;12;2025;M;X;X;Glemte å notere...
+28;12;2025;N;0;4;Skrev bra layout program idag :D
+29;12;2025;M;X;X;Glemte å notere...
+29;12;2025;N;0;4

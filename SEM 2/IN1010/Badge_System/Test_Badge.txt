@@ -1,0 +1,4 @@
+Name;Damage_Amp
+Desc;Test_Desc
+Lore;Test_Lore
+Slots;3

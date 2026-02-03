@@ -1,0 +1,10 @@
+Hensikten er å måle mitt stressnivå og humør hver morgen og kveld i en lengre periode.
+Samtidig tar jeg også ashwaganda-tilskudd, for å se om dette vil senke stress eller påvirke humør.
+
+Ideer til dataanalyse:
+-Stress over hele perioden
+-humør over hele perioden
+-Stress og humør på spesifikke dager
+-Stress i forhold til humør.
+
+Når du ser på disse tingene, se etter spesielle trender!!

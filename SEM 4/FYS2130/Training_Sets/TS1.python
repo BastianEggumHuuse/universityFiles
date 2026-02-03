@@ -1,0 +1,61 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# 2)
+
+# a)
+
+# Defining functions
+def x_1(t):
+	return 2 * np.cos(2 * t)
+
+def x_2(t):
+	return 2 * np.cos(2 * t + np.pi/3)
+
+# Creating values
+T = np.linspace(0,np.pi,100)
+X1 = x_1(T)
+X2 = x_2(T)
+
+# Plotting
+ax = plt.axes()
+ax.plot(T,X1,color = "green",label = "$2\\cos{\\left(2t\\right)}$")
+ax.plot(T,X2,color = "teal",label = "$2\\cos{\\left(2t + \\frac{\\pi}{3}\\right)}$")
+ax.grid()
+ax.legend()
+plt.show()
+
+# c)
+
+# Defining more functions
+def theta(t,phi = 0):
+	return 2*t + phi
+
+R   = 2
+TH1 = theta(T)
+TH2 = theta(T,np.pi/3)
+
+# Plotting (again)
+ax = plt.axes()
+ax.plot(R*np.cos(TH1),R*np.sin(TH1),color = "green",label = "$2\\cos{\\left(2t\\right)}$")
+ax.plot(R*np.cos(TH2),R*np.sin(TH2),color = "purple",label = "$2\\cos{\\left(2t + \\frac{\\pi}{3}\\right)}$")
+ax.grid()
+ax.legend()
+ax.set_xlabel("$x$")
+ax.set_ylabel("$\\dot x$")
+plt.show()
+
+T = np.linspace(0,np.pi/2,100)
+R   = 2
+TH1 = theta(T)
+TH2 = theta(T,np.pi/3)
+
+# Plotting (again)
+ax = plt.axes()
+ax.plot(R*np.cos(TH1),R*np.sin(TH1),color = "green",label = "$2\\cos{\\left(2t\\right)}$")
+ax.plot(R*np.cos(TH2),R*np.sin(TH2),color = "firebrick",label = "$2\\cos{\\left(2t + \\frac{\\pi}{3}\\right)}$")
+ax.grid()
+ax.legend()
+ax.set_xlabel("$x$")
+ax.set_ylabel("$\\dot x$")
+plt.show()

@@ -1,0 +1,95 @@
+Oppgave 1)
+
+    Både oppgave a) og b) krever mappen Inputs, som er lagt ved i innleveringen. For begge oppgavene
+    skrives data til filer som lagres i samme mappe som programmet.
+
+    Oppgave a)
+
+        Filen BinarySearchTree inneholder selve datastrukturen, mens A1.java er filen som løser selve oppgaven.
+        A1.java kjøres i terminal med følgende kommando:
+            java A1 Inputs/input_100000
+
+    Oppgave b)
+
+        Filen AVLTree inneholder selve datastrukturen, mens B1.java er filen som løser selve oppgaven.
+        B1.java kjøres i terminal med følgende kommando:
+            java B1 Inputs/input_100000
+
+        (merk at å kjøre dette programmet tar litt tid)
+
+Oppgave 2)
+
+    Oppgave a)
+
+        Følgende er pseudo-kode for oppgave 1B:
+
+        ------------------------------------------------------
+        Procedure SkrivBalansertRekkefølge(array):
+
+            upper <= array.length;
+
+            if upper = 0 then 
+                return
+        
+            mid <= floor(upper / 2.0)
+
+            print(array[mid])
+
+            array1 <= new int array(mid)
+            array2 <= new int array(mid)
+
+            if upper % 2 = 0 then
+                array2 <= new int array(mid - 1)
+
+            for i in range(0,upper,1) do
+                if i < mid then
+                    array1[i] <= array[i];
+                if i > mid then
+                    array2[i-mid-1] <= array[i];
+
+            skrivBalansertRekkefølge(array2);
+            skrivBalansertRekkefølge(array1);
+        ------------------------------------------------------
+
+        Programmet Oppgave2a.java løser denne oppgaven. Det kan kjøres i terminal med følgende kommando:
+        java Oppgave2a 0 1 2 3 4 5 6 7 8 9 10
+        Dette produserer akkurat samme output som i oppgavebeskrivelsen.
+
+    Oppgave b)
+
+        Følgende er pseudo-kode for oppgave 2B:
+
+        --------------------------------------------------
+        Procedure PrintBalanced(Queue)
+
+            if Queue.size() = 1 then
+                print(Queue.poll())
+
+            Queue1 <= Queue.copy()
+            Queue2 <= new PriorityQueue()
+            element <= 0
+
+            while Queue1.size() != Queue2.size() do
+                element <= Queue1.poll()
+                if input1.size() == input2.size() then
+                    break
+                Queue2.offer(element)
+
+            if Queue.size() % 2 = 0.0 then
+                element = Queue1.poll()
+
+            print(element)
+
+            if(Queue1.size() > 0)
+            {
+                PrintBalanced(Queue1)
+            }
+            if(Queue2.size() > 0)
+            {
+                PrintBalanced(Queue1)
+            }
+        --------------------------------------------------
+
+        Programmet B2.java løser denne oppgaven. Det kan kjøres i terminal med følgende kommando:
+        java B2 0 1 2 3 4 5 6 7 8 9 10
+        Dette produserer akkurat samme output som i oppgavebeskrivelsen.

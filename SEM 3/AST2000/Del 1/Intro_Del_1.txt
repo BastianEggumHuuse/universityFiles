@@ -1,0 +1,34 @@
+We writing the intro with this one :D
+
+Å simulere en rakett
+
+[BILDE : Rakettoppskytning]
+[BILDETEKST : Oss om ikke så lenge (hentet fra [LINK])]
+
+En hver reise i rommet begynner selvsagt med å forlate planeten, og til dette trenger vi en rakett.
+Her støter vi på et problem, i at drivstoffet vi skal bruke er dyrt (og at vi har alt for lite penger), så vi har ikke råd til å prøve og feile. 
+I håp om å løse dette, vil vi først simulere oppskytningen, slik at vi finner en tilnærming til hvor mye drivstoff vi trenger. 
+Når vi først har funnet ut av dette, vil vi så kjøre enda en simulasjon, under litt mer realistiske tilstander, for å sjekke at alt går greit :)
+
+For å gjennomføre denne simulasjonen vil vi trenge flere viktige konsepter fra statistikk, termodynamikk, og mekanikk, som vi vil introdusere når det blir relevant.
+Den viktigste delen av simulasjonen er rakettmotoren, som bruker mange av disse konseptene.
+Når simulasjonen er gjennomført, og vi får hentet inn den informasjonen vi trenger, vil vi kunne forberede oss til den ordentlige oppskytningen.
+Når vi endelig får skutt opp raketten, vil vi kunne sette kursen mot de andre planetene i solsystemet vårt, og ikke minst ta utrolig fine bilder mens vi går i bane rundt planeten.
+
+[BILDE : fra verdensrommet]
+[BILDETEKST : Se for deg om vi tok dette bildet!!!! (hentet fra [LINK])]
+
+Rakettoppskytningen er den aller første delen av reisen vår, og
+
+[BILDE : Håndtegnet bilde av oss i verdensrommet]
+[BILDETEKST : Oss om ikke så lenge (hentet fra [LINK])]
+
+# Euler metoden
+
+For å simulere bevegelsen til H_2 partiklene innad i motoren, vil vi bruke noe som heter Euler-metoden.
+En av de første tingene man lærer i naturfag på barneskolen, er forholdet mellom strekning, hastighet, og tid.
+Dersom du har en bil som kjører rett framover, med konstant hastighet v, over en tidsintervall t, kan vi finne strekningen den har beveget seg, s, ved å multiplisere sammen v og t. [Eksempel].
+Når vi ser på H_2 partiklene, kan vi se på dem som veldig små biler. 
+Hvis vi ønsker å se hvordan disse beveger seg over tid, kan vi regne med veldig små tidsintervall (ofte skriver man da delta_t i stedet for t), og siden vi ved hva hastigheten v til partiklene er, kan vi multiplisere disse sammen,
+for å finne ut hvor langt partiklene har beveget seg i løpet av denne korte tidsperioden (ofte noterer vi dette som delta_s). Legger vi til dette til partiklenes posisjoner (som vi vet fra før), vet vi da hvor alle partiklene befinner seg nå!
+Vi kan repetere denne prosessen så lenge vi vil, for å simulere over lengre tidsperioder.

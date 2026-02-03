@@ -1,0 +1,170 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{amsmath,graphicx,varioref,verbatim,amsfonts,geometry,wasysym}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{accents}
+\usepackage{navigator}
+\usepackage{newfloat}
+
+\DeclareFloatingEnvironment[]{Vedlegg}
+
+\embeddedfile{Svingetid.txt}{Svingetid.txt}
+\embeddedfile{Svingehistogram.py}{Svingehistogram.py}
+\embeddedfile{SEM.py}{SEM.py}
+\embeddedfile{Kalibreringskurve.py}{Kalibreringskurve.py}
+\embeddedfile{Kalibreringsmasser.txt}{Kalibreringsmasser.txt}
+\embeddedfile{Perioder.txt}{Perioder.txt}
+\embeddedfile{Perioder.py}{Perioder.py}
+\embeddedfile{IntensityPlot.py}{IntensityPlot.py}
+\embeddedfile{TrueIntensity.txt}{TrueIntensity.txt}
+\embeddedfile{Get_h_line.py}{Get_h_line.py}
+\embeddedfile{Heights.txt}{Heights.txt}
+\embeddedfile{Lengths.txt}{Lengths.txt}
+\embeddedfile{WorkWithLenghts.py}{WorkWithLenghts.py}
+
+% Document formatting
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{1.0mm}
+\captionsetup{width=0.8\linewidth}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Oblig 3},
+    pdfpagemode=FullScreen,
+    }
+
+\title{LABORATORIERAPPORT I STK-FYS1110}
+\author{Bastian Eggum Huuse}
+\date{20/05/2025}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\section*{Sammendrag}
+
+Laboratoriearbeidet var delt i 4 eksperimenter, hvorav de to første har underdelinger. Hensikten med arbeidet var å bli introdusert til forskjellige måter å gjennomføre eksperimentell fysikk, hvordan analysere data fra eksperimenter, hvordan håndtere og propagere feil, og hvordan skrive rapport rundt disse tingene.
+
+Gjennom eksperimentene ble vi introdusert for forskjellige metoder for å samle forskjellige typer data; i eksperiment 1 ble vi introdusert for forskjellige måter å måle vanlige fysiske størrelser, som lengde og tid. I eksperiment to så vi på forskjellige måter å måle masse på, først med en vekt, og så med en pendel. I eksperiment 3  jobbet vi med måling av ioniserende stråling, og i eksperiment 4 så vi på blant annet hvordan man kan sjekke om en hypotese er riktig.
+
+I eksperimentene kom vi fram til flere resultater, hvorav noen er plukket fram her. I det første eksperimentet, fant vi usikkerhetene i en rekke fysiske mål. I det andre eksperimentet, lagde vi en regresjonsmodell for å estimere massen til et ukjent objekt. I det tredje eksperimentet, lineariserte vi en sammenheng som vi så tilpasset en regresjonsmodell til, og i det fjerde eksperimentet estimerte vi rekkevidden i en prosjektilbevegelse.
+
+Fra disse resultatene trakk vi konklusjoner om eksperimentene. Forsøk 1 fortalte oss hvilke måleinstrumenter som passer best til hvilke oppgaver. Forsøk 2 og 3 lærte oss om begrensningene i modellene vi lagde, mens i forsøk 4 konkluderte vi med at vi hadde noen systematiske feil. 
+
+
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\include{Section_1}
+
+\newpage
+
+\include{Section_2}
+
+\newpage
+
+\include{Section_3}
+
+\newpage
+
+\include{Section_4}
+
+\newpage
+
+\section{Konklusjon}
+
+Følgende er hovedkonklusjoner for eksperimentene:
+
+\subsection*{Eksperiment 1}
+
+I forsøk b så vi at usikkerhetene i målene tatt med målestokk å skyvelære er mindre enn målet med lasermåler, mens i forsøk c, kan vi se at lasermåleren kan finne lengden opp til taket med relativt lav usikkerhet.
+
+Vi kan konkludere med at målestokken og skyvelæren er mest nøyaktige når det kommer til å måle korte distanser som tykkelsene på klossene, skyvelæren enda mer enn målestokken, mens lasermåleren egner seg til å måle lengre distanser, som avstanden til taket.
+
+\subsection*{Eksperiment 2}
+
+I både forsøk d og e så vi at instrumentene vi brukte for å måle masse hadde begrensninger. Fjærvekten hadde begrensninger i hvor små og hvor store endringer i masse den kunne måle, og det samme gjaldt pendelen. Den samme konklusjonen kan trekkes ved å se på fjærvektens dynamiske området, 1.34, som forteller oss om størrelsesordenen mellom fjærvektens største og minste målbare verdi.
+
+i forsøk d lagde vi en regresjonsmodell basert på målene vi tok fra fjærvekten, og denne modellen ga oss et ganske bra estimat for massen til aluminiumsloddet vi målte ($\hat{m} = 2122.5$g, som er ganske nærme $m = 2145$g). Samtidig kom modellen med store usikkerheter, som tyder mot at den kunne vært bedre.
+
+\subsection*{Eksperiment 3}
+
+I det tredje eksperimentet kom vi fram til at usikkerheten i tellingene våre vil ha større virkning på resultatene enn usikkerheten i blytykkelsen. Vi kan se dette på de relative usikkerhetene, som er høyere for tellingene.
+
+Vi kom også fram til at man kan bruke lineær regresjon på sammenhenger som ikke er lineære, ved å linearisere utrykket, i dette tilfellet ved å ta logaritmen av det. Dette lot oss danne en lineær modell for å estimere hvor mye stråling som kommer gjennom en gitt blytykkelse.
+
+\subsection*{Eksperiment 4}
+
+I det fjerde eksperimentet kom vi fram til at vi ikke klarer å måle tiden i et horisontalt kast, og at vi må bruke et vertikalt kast til å estimere prosjektilens startfart.
+
+Vi kom også fram til et estimat for hvor prosjektilen vil lande i et kast med $\theta = 30^\circ$, men selv om dette estimatet er ganske nærme der prosjektilen faktisk endte opp, er det en systematisk usikkerhet et sted i forsøket.
+
+\newpage
+
+\section{Referanser}
+
+-
+
+\newpage
+
+\section{Vedlegg} \label{Vedlegg}
+
+\begin{center}
+
+\captionof{Vedlegg}{}\label{Svingetid.txt}
+\openfilelink{Svingetid.txt}{\texttt{Svingetid.txt}}\medskip
+
+\captionof{Vedlegg}{}\label{Svingehistogram.py}
+\openfilelink{Svingehistogram.py}{\texttt{Svingehistogram.py}} \medskip
+
+\captionof{Vedlegg}{}\label{SEM.py}
+\openfilelink{SEM.py}{\texttt{SEM.py}}\medskip 
+
+\captionof{Vedlegg}{}\label{Kalibreringskurve.py}
+\openfilelink{Kalibreringskurve.py}{\texttt{Kalibreringskurve.py}}\medskip 
+
+\captionof{Vedlegg}{}\label{Kalibreringsmasser.txt}
+\openfilelink{Kalibreringsmasser.txt}{\texttt{Kalibreringsmasser.txt}}\medskip 
+
+\captionof{Vedlegg}{}\label{Perioder.txt}
+\openfilelink{Perioder.txt}{\texttt{Perioder.txt}}\medskip 
+
+\captionof{Vedlegg}{}\label{Perioder.py}
+\openfilelink{Perioder.py}{\texttt{Perioder.py}}\medskip 
+
+\captionof{Vedlegg}{}\label{IntensityPlot.py}
+\openfilelink{IntensityPlot.py}{\texttt{IntensityPlot.py}}\medskip
+
+\captionof{Vedlegg}{}\label{TrueIntensity.txt}
+\openfilelink{TrueIntensity.txt}{\texttt{TrueIntensity.txt}}\medskip
+
+\captionof{Vedlegg}{}\label{Get_h_line.py}
+\openfilelink{Get_h_line.py}{\texttt{Get\_h\_line.py}}\medskip
+
+\captionof{Vedlegg}{}\label{Heights.txt}
+\openfilelink{Heights.txt}{\texttt{Heights.txt}}\medskip
+
+\captionof{Vedlegg}{}\label{Lengths.txt}
+\openfilelink{Lengths.txt}{\texttt{Lengths.txt}}\medskip
+
+\captionof{Vedlegg}{}\label{WorkWithLengths.py}
+\openfilelink{WorkWithLenghts.py}{\texttt{WorkWithLenghts.py}}\medskip
+
+
+\end{center}
+
+\end{document}
