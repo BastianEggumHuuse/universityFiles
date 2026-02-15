@@ -88,6 +88,7 @@ trivialTest:
   retw  		# Return (argument in ax)
   
 displayString:
+  #xchgw %bx, %bx # STOPPING!!!
   pushw  %bp		# Setup stack frame
   movw  %sp,%bp
   pushw  %ax		# Save ax, bx, cx, si, es

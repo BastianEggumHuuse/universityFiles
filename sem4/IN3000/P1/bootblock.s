@@ -1,71 +1,155 @@
+# bootblock.s
 
-	.equ	BOOT_SEGMENT,    0x07c0
-	.equ	DISPLAY_SEGMENT, 0xb800
-	.equ    STACK_POINTER,   0xfffe
+# .equ symbol, expression. 
+# This directive sets the value of symbol to expression
+	.equ	KERNEL_SEGMENT,0x0800
+	.equ	DISPLAY_SEGMENT,0xb800
+	.equ    STACK_SEGMENT, 0x7000
+	.equ    STACK_POINTER, 0xfffe
 
 .text                  # Code segment
 .globl	_start	       # The entry point must be global
 .code16                # Real mode
 
+#
+# The first instruction to execute in a program is called the entry
+# point. The linker expects to find the entry point in the "symbol" _start
+# (with underscore).
+#
 _start:
-	jmp	over # Jumping to the actual start of the code
+	jmp	over
+
 os_size:
 	# area reserved for createimage to write the OS size
 	.word	0
 	.word	0
+
 over:
+	movw	$DISPLAY_SEGMENT,%bx	
+	movw	%bx,%es		
+	movw	$0x074b,%es:(0x0)	# Write 'K' in the upper left corner
+					#  of the screen
 
-	# 1) Loading the kernel
+	jmp createStack
 
-	# Preparing for INT 0x13
-	mov $0x20, %ah # which 0x13 instruction
-	mov $127, %al  # Number of sectors to read
-	mov $0, %ch    # Cylinder
-	mov $2, %cl    # Sector
-	mov $0, %dh    # Drive
-	mov DISPLAY_SEGMENT, %es # target memory segment
-	mov $0, %bx     	 # target memory offset
-	mov os_size, %sp	 # Storing OS size
-
-checkIfFinished:
-	
-	cmp 127, %sp
-	jo  maxRead
-	jmp smallRead
-
-maxRead:
-
-	int $0x13 # Calling the interrupt
-	jc  crisis
-
-	mov $0, %ah
-	mul $0x20    # Doesn't work??
-	add %ax, %es # Doesn't work??
-	add $2, %dh
-
-	mov $0x20, %ah
-	mov 127, %al
-	sub 127, %sp
-	jmp checkIfFinished:
-
-smallRead:
-	
-	int $0x13 # Calling the interrupt
-	jc  crisis
-
-	mov $0, %ah
-	mul $0x20    # Doesn't work??
-	add %ax, %es # Doesn't work??
-	add $2, %dh
-	
 createStack:
+	# Now the ES register is pointing to the end of the kernel, 
+	#   copying ES to SS sets the correct stack segment
+	movw $STACK_SEGMENT, %bx
+	# movw %es, %bx 
+	movw %bx, %ss
 
-	mov %es, %ss	
-	mov STACK_POINTER, %sp
+	# Set stackpointer to the beginning of the stack
+	movw $0xfffe, %bx
+	movw %bx, %sp
 
-jumpToKernel:
+	# xchgw %bx, %bx
 	
-	goto DISPLAY_SEGMENT
+	# jmp toKernel
 
-crisis:
-	jmp crisis
+	# Set registers for INT 0x13 
+	movb $0x02, %ah
+	movb $1, %al
+	movw $2, %cx   # second sector 
+	movb $0, %dh
+	movw $KERNEL_SEGMENT, %bx
+	movw %bx, %es
+
+	movw (os_size + 0x7c00), %bx
+	movw %bx, %di
+
+	movw (os_size + 0x7c00 + 2), %bx
+	movw %bx, %si
+
+	jmp checkIfDone
+
+	# Path - /mnt/c/Users/maxfo/Documents/UiO/vår26/In3000/In3000-precode-P1/1_pre
+
+checkIfDone:
+	# if SP == 0
+	movw %di, %bx
+	cmpw $0, %bx
+	jnz decSP
+
+	# if SS == 0
+	movw %si, %bx
+	cmpw $0, %bx
+	jz toKernel
+
+	# SS--
+	movw %si, %bx
+	decw %bx
+	movw %bx, %si
+
+	# SP = 0xFFFF
+	movw $0xffff, %bx 
+	movw %bx, %di
+	jg read
+
+decSP:
+	# SP--
+	movw %di, %bx
+	decw %bx
+	movw %bx, %di
+	jmp read
+
+read:
+	# xchgw %bx, %bx   # add 337 and then it fails at test al, al
+	movw $0, %bx
+
+	int $0x13
+	
+
+	# If CF is set, throw error 
+	jc error
+
+	# --- Make registers ready for another INT 0x13 ---
+
+	# Make AX contain the number of sectors read
+	movb $0x0000, %ah
+	imulw $0x0020, %ax
+
+
+
+	# ES += 0x0020 * AX
+	movw %es, %bx
+	addw %ax, %bx
+	movw %bx, %es
+
+	movb $0x02, %ah
+	movb $1, %al      # number of sectors to read 
+
+	incb %cl
+
+	# if cl == 64
+	cmpb $64, %cl
+	jnz checkIfDone
+
+	# else DH++ and CL = 1
+	incb %dh
+	movb $1, %cl
+
+	jmp checkIfDone
+
+
+error:
+	# Print exit code
+	movw	$DISPLAY_SEGMENT,%bx	
+	movw	%bx,%es	
+
+	movb    %ah, %al
+	movb    $0x4e, %ah
+	addb    $65, %al
+	movw	%ax,%es:(0x0)	# Write error kode to top left corner
+	
+	jmp forever
+
+forever:
+	jmp	forever                 # Loop forever
+
+	# Reboot 
+	# ljmp $0xffff, $0x000
+
+toKernel:
+	# Do a long jump to 0x0800:0000
+	ljmp $0x0800, $0x0000

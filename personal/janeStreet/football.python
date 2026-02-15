@@ -1,0 +1,126 @@
+import numpy as np
+import random as rd
+import matplotlib.pyplot as plt
+
+class shape:
+
+	def __init__(self,name,numSides):
+		self.name = name
+
+		self.connections = []
+		self.chances     = []
+		self.numSides = numSides
+		self.numConnections = 0
+	
+	def addConnection(self,newConnection,newChance):
+		self.connections.append(newConnection)
+		self.chances.append(newChance)
+		self.numConnections += 1
+
+	def move(self):
+		num = rd.random()
+
+		#print(f"num: {num:20}, bnum: {num*self.numSides:20}, sides: {self.numSides}")
+
+		sum = 0
+		for i in range(0,self.numConnections):
+			sum += self.chances[i]
+
+			if num <= sum:
+				return self.connections[i]
+
+		#print("Exceeds bounds!! ", num)
+		return self.connections[-1]
+	
+	def __str__(self):
+		return self.name
+
+# Creating our shapes
+p1 = shape("p1",5)
+p2 = shape("p2",5)
+p3 = shape("p3",5)
+p4 = shape("p4",5)
+
+h1 = shape("h1",6)
+h2 = shape("h2",6)
+h3 = shape("h3",6)
+h4 = shape("h4",6)
+
+# Connection our shapes
+p1.addConnection(h1,1)
+
+p2.addConnection(h1,2/5)
+p2.addConnection(h2,2/5)
+p2.addConnection(h3,1/5)
+
+p3.addConnection(h2,1/5)
+p3.addConnection(h3,2/5)
+p3.addConnection(h4,2/5)
+
+p4.addConnection(h4,1)
+
+h1.addConnection(p1,1/6)
+h1.addConnection(h1,2/6)
+h1.addConnection(h2,1/6)
+h1.addConnection(p2,2/6)
+
+h2.addConnection(h1,1/6)
+h2.addConnection(p2,2/6)
+h2.addConnection(p3,1/6)
+h2.addConnection(h3,2/6)
+
+h3.addConnection(p2,1/6)
+h3.addConnection(h2,2/6)
+h3.addConnection(p3,2/6)
+h3.addConnection(h4,1/6)
+
+h4.addConnection(h3,1/6)
+h4.addConnection(p3,2/6)
+h4.addConnection(h4,2/6)
+h4.addConnection(p4,1/6)
+
+# Running simulation
+
+trueStartShape = h1
+startShape   = p1
+totalLoops   = 1000000
+slices       = totalLoops / 10
+totalMoves   = np.zeros(totalLoops)
+breakMoves   = 10000
+
+print(f"Setting break moves to {breakMoves}")
+print(f"Beginning simulation of {totalLoops} steps:\n")
+for i in range(totalLoops):
+
+	if(i % slices == 0):
+		print(f"Performing cycle {i}/{totalLoops}")
+
+	currentShape   = trueStartShape
+	currentMoves   = 1
+
+	while currentShape != startShape:
+		#print(currentShape)
+		currentShape = currentShape.move()
+		currentMoves += 1
+
+		if(currentMoves > breakMoves):
+			print("Breaking caused by overflow")
+			break
+	
+	totalMoves[i] = currentMoves
+
+meanMoves = np.mean(totalMoves)
+print(f"\nResult: {meanMoves} moves")
+
+"""
+a_2 = 1/6
+a_3 = 2/36
+a_4 = 2*1/(6**3) + 4*1/(6**2 * 5) + 3*1/(6**3)
+a_5 = 2*1/6*a_4 + 3 * 1/(6*5)*a_3 + 1/(6**3)*a_4 + 4*1/(6**3 * 5)*a_2
+
+print(a_2)
+print(a_3)
+print(a_4)
+print(a_5)
+print(a_2 * 2 + a_3 * 3 + a_4 * 4 + a_5 * 5)
+"""
