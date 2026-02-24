@@ -1,0 +1,22 @@
+Our bootblock works! (at least for us)
+
+The following has changed since the design document:
+
+	- In createimage.c, we now place os_size in it's expected position (from byte 2 onward) in the bootblock.
+	- In bootblock.s, several things have changed:
+		- We now create the stack BEFORE loading the kernel
+		- We now use the registers SI:DI to store OS size
+		- We load the kernel one segment at a time (instead of loading multiple)
+		- We've added a little bit of error-printing, for the cases where INT 0x13 fails
+	
+Some other notes:
+
+	- On top of our createimage.c which creates the image using section headers, we've included a variant called
+	  createimage_p.c, which uses program headers. Using the program headers was advised by the TAs we spoke to, but
+	  our bootblock ended up not having those after assembling, so we wrote an alternative using the section headers.
+	  We've included the program header variant anyway, but note that it only works on bootblock.given, not our own 
+	  bootblock (it's also less polished than the regular createimage.c)
+	- We've included a separate kernel called kernel_large.s, which is a copy of the given kernel, with a bunch of garbage
+	  added to increase it's size. We used this kernel to test if our bootblock could successfully load a larger kernel, and for
+	  this reason, we made the kernel size greater than 63 sectors (since there's 63 sectors in a Head). Feel free to attempt to
+	  load it! (note that we only tested it on bochs, using bochs's memory dumping feature to check that everything loaded correctly)

@@ -1,0 +1,79 @@
+--------------- Ideas -----------------
+Initialization:
+	+ We create structs of each process and thread. Each one gets one pcb_t object to store their data in.
+	+ The pcb_t objects should include
+		- State (Ready,Blocked,Exited)
+		- Registers (all of them, including weird ones like EFLAGS)
+		- Process/Thread stack segment pointer and offset pointer (I would think)
+		- Instruction pointer (very important)
+		- More probably
+Syscalls:
+	+ I have no fucking idea boss
+		- They say we should implement YIELD and EXIT but I feel like these don't have to be syscalls?
+		- Oh wait I think I get it. YIELD has to save context, and EXIT has to delete context
+		  (to save stack space).
+Context Switching:
+	+ This is the most difficult part of this challenge I think
+	+ Need to think a bit more about it.
+	+ Holy shit I have an idea.
+		- The PCB! Lecture notes says that the pcb should contain state, but also
+		  registers, flags, stack pointer, and so on.
+		- This is why we need to access the data through assembly!
+Scheduling:
+	+ current_running must be the currently running process/thread at all times,
+	  as other functions use it.
+	+ yield(void)
+		- Calls scheduler_entry()	
+	+ scheduler_entry(void)
+		- Saves the context and kernel stack. This is run before every call to scheduler(void)
+		- Written in assembly (entry.S). I believe this may get linked automatically
+	+ scheduler(void)
+		- Determins what process should be run next.
+		- Sets current_running to the back of the queue. If we make the ready queue cyclic, we can
+		  simply set current_running to current_running.next (assuming that the ready queue contains
+		  no blocked threads). If we remove threads with block and unblock, this is possible. 
+		- Alternatively, we can move forward through the ready queue, removing all the blocked and
+		  exited threads/processes as we go. (On second thought, I believe this approach is better.
+		  It saves resources in the cases where a process both locks and then unlocks without a
+		  yield occuring.)
+	+ dispatch(void)
+		- Runs the next process/thread. Called after scheduler.
+		- If the next processe hasn't run before (current_running->status == STATUS_FIRST_TIME), 
+		  we simply run it.
+		- If the next process has run before (current_running->status == STATUS_READY),
+		  we have to retrieve it's context. I'm unsure of how this should be done.
+	+ exit(void)
+		- Exits current_running. This removes current_running from the ready queue, and also
+		  sets it's state to STATUS_EXITED
+Blocking:
+	+ block(pcb_t** q)
+		- blocks current_running. It is blocked by removing it from the ready queue, and
+		  placing it in pcb_t**
+	+ unblock(pcb_t** q)
+		- unblocks the first process in the waiting queue q. The last process is given by (*q),
+		  since we always insert first (I think??)
+Locks: 
+	+ lock_init(lock_t* l)
+		- Creates a waiting queue for this lock
+		- This list is passed to block(pcb_t**) when blocking threads
+	+ lock_aquire(lock_t* l)
+		- If lock is unlocked, lock it and continue
+		- If lock is locked, block current thread
+	+ lock_release(lock_t* l)
+		- If lock is unlocked, do nothing (or throw error)
+		- If lock is locked, unblock all threads in the waiting queue
+Efficiency:
+	+ Monitoring efficiency
+
+You are writing:
+	+ Init (and pcb_t)
+	+ Threads (and locks)
+	+ Efficiency (time)
+	+ Flowchart
+
+Generating 
+uioforside -a "Candidate nr. 1: XXX, Candidate nr. 2: XXX" -t
+"INF3151/4151, Group nr. XXX, Project nr. XXX: Design Proposal" -o forside.ps
+
+uioforside -a "Candidate nr. 1: bastiaeh, Candidate nr. 2: maxfo" -t
+"INF3151/4151, Group nr. 3, Project nr. 2: Design Proposal" -o forside.ps
